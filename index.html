@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>ASSEN MAHAMA Sani | Développeur Web</title>
 <meta name="description" content="Portfolio professionnel de ASSEN MAHAMA Sani - Développeur Web Junior">
 
@@ -11,27 +10,27 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-
 html{scroll-behavior:smooth}
 
 body{
 font-family:'Poppins',sans-serif;
-background:linear-gradient(to right,#f8f9fa,#eef1f5);
-color:#333;
-line-height:1.6;
+background:#f5f7fa;
+color:#2c3e50;
+line-height:1.7;
 }
 
+/* NAVIGATION */
 nav{
 background:white;
-padding:15px 30px;
+padding:18px 40px;
 position:sticky;
 top:0;
-box-shadow:0 2px 10px rgba(0,0,0,0.08);
+box-shadow:0 4px 20px rgba(0,0,0,0.05);
 z-index:100;
 }
 
 .nav-container{
-max-width:1100px;
+max-width:1200px;
 margin:auto;
 display:flex;
 justify-content:space-between;
@@ -39,38 +38,55 @@ align-items:center;
 }
 
 .nav-links a{
-margin-left:20px;
+margin-left:25px;
 text-decoration:none;
-color:#333;
+color:#2c3e50;
 font-weight:500;
+position:relative;
 transition:0.3s;
 }
 
-.nav-links a:hover{color:#0077ff}
+.nav-links a::after{
+content:"";
+position:absolute;
+width:0;
+height:2px;
+background:#4e73df;
+left:0;
+bottom:-5px;
+transition:0.3s;
+}
 
+.nav-links a:hover::after{
+width:100%;
+}
+
+/* HERO */
 .hero{
 text-align:center;
-padding:100px 20px;
+padding:120px 20px;
 background:linear-gradient(135deg,#4e73df,#6f42c1);
 color:white;
 }
 
 .hero h1{
-font-size:42px;
-margin-bottom:10px;
+font-size:48px;
+margin-bottom:15px;
+animation:fadeIn 1s ease;
 }
 
 .hero p{
-font-size:18px;
-margin-bottom:20px;
+font-size:20px;
+margin-bottom:30px;
+opacity:0.95;
 }
 
 .btn{
 display:inline-block;
-padding:10px 20px;
+padding:12px 28px;
 background:white;
 color:#4e73df;
-border-radius:25px;
+border-radius:30px;
 text-decoration:none;
 font-weight:600;
 transition:0.3s;
@@ -79,32 +95,36 @@ transition:0.3s;
 .btn:hover{
 background:#ff6600;
 color:white;
+transform:translateY(-3px);
 }
 
+/* CONTAINER */
 .container{
 max-width:1100px;
 margin:auto;
-padding:60px 20px;
+padding:80px 20px;
 }
 
-.section{margin-bottom:80px}
+.section{margin-bottom:100px}
 
 h2{
 text-align:center;
-margin-bottom:40px;
+margin-bottom:50px;
+font-size:30px;
 position:relative;
 }
 
 h2::after{
 content:"";
-width:60px;
+width:70px;
 height:4px;
-background:#0077ff;
+background:#4e73df;
 display:block;
-margin:10px auto;
-border-radius:3px;
+margin:12px auto;
+border-radius:2px;
 }
 
+/* ABOUT */
 .about-content{
 text-align:center;
 max-width:800px;
@@ -112,73 +132,91 @@ margin:auto;
 }
 
 .about-content img{
-width:180px;
+width:190px;
 border-radius:50%;
-margin-top:30px;
-box-shadow:0 10px 30px rgba(0,0,0,0.15);
+margin-top:40px;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+transition:0.3s;
 }
 
+.about-content img:hover{
+transform:scale(1.05);
+}
+
+/* SKILLS */
 .skills-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:25px;
 }
 
 .skill-item{
 background:white;
-padding:25px;
+padding:30px;
 text-align:center;
-border-radius:15px;
-box-shadow:0 15px 35px rgba(0,0,0,0.08);
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,0.05);
 transition:0.3s;
+font-weight:600;
 }
 
 .skill-item:hover{
-transform:translateY(-8px);
 background:#4e73df;
 color:white;
+transform:translateY(-10px);
 }
 
+/* PROJECTS */
 .projects-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:35px;
 }
 
 .project-card{
 background:white;
-padding:25px;
-border-radius:15px;
-box-shadow:0 15px 35px rgba(0,0,0,0.08);
+padding:30px;
+border-radius:20px;
+box-shadow:0 20px 50px rgba(0,0,0,0.05);
 transition:0.3s;
 }
 
 .project-card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px);
 }
 
+/* CONTACT */
 .contact{
 text-align:center;
 }
 
 .contact a{
 display:block;
-margin:10px 0;
-color:#0077ff;
+margin:15px 0;
 font-weight:600;
 text-decoration:none;
+color:#4e73df;
 transition:0.3s;
 }
 
 .contact a:hover{
 color:#ff6600;
+transform:translateY(-3px);
 }
 
+/* FOOTER */
 footer{
-background:#2c3e50;
+background:#1f2937;
 color:white;
 text-align:center;
-padding:20px;
+padding:30px;
+font-size:14px;
+}
+
+/* ANIMATION */
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(30px);}
+to{opacity:1;transform:translateY(0);}
 }
 </style>
 </head>
@@ -212,10 +250,8 @@ padding:20px;
 Développeur web junior passionné par les technologies numériques, 
 je suis actuellement à la recherche d'une opportunité de formation 
 ou d'immersion professionnelle dans le domaine de l'informatique.
-
 Rigoureux, autonome et motivé, je développe régulièrement des projets 
-personnels afin d'améliorer mes compétences en développement web 
-et en programmation.
+personnels afin d'améliorer mes compétences.
 </p>
 <img src="photo.jpg" alt="Photo ASSEN MAHAMA Sani">
 </div>
@@ -236,13 +272,13 @@ et en programmation.
 <div class="projects-grid">
 
 <div class="project-card">
-<h3>Site Web Restaurant</h3>
-<p>Création d'un site vitrine responsive pour un restaurant local. HTML, CSS.</p>
+<h3>Site Web Responsive</h3>
+<p>Création d'un site vitrine moderne avec HTML et CSS.</p>
 </div>
 
 <div class="project-card">
-<h3>Application Météo</h3>
-<p>Application connectée à une API météo affichant les données en temps réel. JavaScript.</p>
+<h3>Application JavaScript</h3>
+<p>Application interactive développée en JavaScript.</p>
 </div>
 
 </div>
@@ -253,7 +289,7 @@ et en programmation.
 <div class="contact">
 <a href="tel:+33769568323">📞 +33 7 69 56 83 23</a>
 <a href="mailto:saniassen@yahoo.com">✉️ saniassen@yahoo.com</a>
-<a href="CV_ASSEN.pdf" target="_blank">📄 Télécharger mon CV</a>
+<a href="CV Asen.pdf" target="_blank">📄 Télécharger mon CV</a>
 <a href="Lettre_Motivation_ASSEN.pdf" target="_blank">📄 Voir ma lettre de motivation</a>
 </div>
 </section>
