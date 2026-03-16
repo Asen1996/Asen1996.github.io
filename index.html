@@ -1,172 +1,296 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ASSEN MAHAMA Sani | Candidat Formation NoCode</title>
+
+<title>Portfolio | ASSEN MAHAMA Sani</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
 font-family:'Poppins',sans-serif;
 background:#f4f6f9;
-color:#2c3e50;
+color:#333;
 line-height:1.6;
 }
+
+/* NAVIGATION */
+
 nav{
 background:#ffffff;
-padding:20px 40px;
+padding:20px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+}
+
+.nav-container{
+max-width:1100px;
+margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
-nav h3{color:#0077ff}
-nav a{
+
+.nav-links a{
 margin-left:20px;
 text-decoration:none;
-color:#2c3e50;
+color:#333;
 font-weight:500;
 }
-nav a:hover{color:#0077ff}
+
+.nav-links a:hover{
+color:#0077ff;
+}
+
+/* HERO */
 
 .hero{
+background:linear-gradient(135deg,#4e73df,#6f42c1);
+color:white;
 text-align:center;
 padding:80px 20px;
-background:#0077ff;
-color:white;
 }
+
 .hero img{
-width:160px;
+width:150px;
 border-radius:50%;
 margin-top:20px;
 box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
+/* CONTAINER */
+
 .container{
-max-width:900px;
+max-width:1100px;
 margin:auto;
-padding:60px 20px;
+padding:50px 20px;
 }
 
-.section{margin-bottom:60px}
+.section{
+margin-bottom:80px;
+}
 
 h2{
-margin-bottom:20px;
-color:#0077ff;
+text-align:center;
+margin-bottom:30px;
+color:#2c3e50;
 }
 
-.card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.05);
-margin-bottom:20px;
+/* SKILLS */
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
 }
+
+.skill-item{
+background:white;
+padding:20px;
+border-radius:8px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* PROJECTS */
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.project-card{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.project-card img{
+width:100%;
+border-radius:6px;
+margin-top:10px;
+}
+
+/* CONTACT */
 
 .contact a{
 display:block;
 margin:8px 0;
 color:#0077ff;
 text-decoration:none;
-font-weight:500;
 }
 
+/* FOOTER */
+
 footer{
-text-align:center;
-padding:20px;
 background:#2c3e50;
 color:white;
+text-align:center;
+padding:20px;
 }
+
 </style>
 </head>
 
 <body>
 
 <nav>
+
+<div class="nav-container">
+
 <h3>ASSEN MAHAMA Sani</h3>
-<div>
+
+<div class="nav-links">
 <a href="#about">Profil</a>
 <a href="#skills">Compétences</a>
 <a href="#projects">Projets NoCode</a>
 <a href="#contact">Contact</a>
 </div>
+
+</div>
+
 </nav>
 
 <section class="hero">
+
 <h1>Candidat en formation NoCode / Alternance</h1>
-<p>Motivé à intégrer une formation et à développer des projets concrets</p>
-<img src="photo.jpg" alt="Photo ASSEN">
+
+<p>
+Motivé pour développer des compétences dans les outils numériques
+et intégrer une formation professionnelle.
+</p>
+
+<img src="photo.jpg">
+
 </section>
 
 <div class="container">
 
 <section id="about" class="section">
-<h2>Profil</h2>
-<div class="card">
-Passionné par l’informatique et les outils numériques, je souhaite intégrer 
-une formation en NoCode afin d’acquérir des compétences professionnelles 
-et évoluer vers un métier dans le domaine digital.
 
-Je suis actuellement en apprentissage autonome et je développe 
-mes premiers projets pratiques.
-</div>
+<h2>Profil</h2>
+
+<p style="text-align:center;max-width:700px;margin:auto">
+
+Passionné par l'informatique et les outils numériques,
+je souhaite intégrer une formation afin de développer
+mes compétences dans le domaine du digital.
+
+Je suis actuellement en apprentissage autonome
+et je réalise plusieurs projets avec des outils
+NoCode pour construire mon portfolio.
+
+</p>
+
 </section>
 
 <section id="skills" class="section">
-<h2>Compétences actuelles</h2>
-<div class="card">
-• Bases HTML / CSS<br>
-• Découverte des outils NoCode<br>
-• Utilisation d’outils bureautiques<br>
-• Installation et configuration logiciels<br>
-• Motivation et capacité d’apprentissage rapide
+
+<h2>Compétences</h2>
+
+<div class="skills-grid">
+
+<div class="skill-item">HTML</div>
+<div class="skill-item">CSS</div>
+<div class="skill-item">JavaScript (bases)</div>
+<div class="skill-item">Python (bases)</div>
+<div class="skill-item">Outils bureautiques</div>
+<div class="skill-item">Installation logiciels</div>
+
 </div>
+
 </section>
 
 <section id="projects" class="section">
-<h2>Projets NoCode (en cours)</h2>
 
-<div class="card">
+<h2>Projets NoCode</h2>
+
+<div class="projects-grid">
+
+<div class="project-card">
+
 <h3>Mini CRM avec Airtable</h3>
+
 <p>
-Création d’une base de données clients avec gestion des contacts,
-filtres et vues personnalisées.
+Création d'une base de données pour gérer des contacts
+avec statuts et filtres.
 </p>
+
+<img src="crm.jpg">
+
 </div>
 
-<div class="card">
+<div class="project-card">
+
 <h3>Landing Page Webflow</h3>
+
 <p>
-Création d’une page de présentation responsive avec formulaire intégré.
+Création d'une page web responsive avec formulaire
+en utilisant un outil NoCode.
 </p>
+
+<img src="webflow.jpg">
+
 </div>
 
-<div class="card">
+<div class="project-card">
+
 <h3>Automatisation Zapier</h3>
+
 <p>
-Connexion d’un formulaire à une base de données avec envoi automatique d’email.
+Connexion d'un formulaire avec une base de données
+et envoi automatique d'un email.
 </p>
+
+<img src="zapier.jpg">
+
+</div>
+
 </div>
 
 </section>
 
 <section id="contact" class="section">
+
 <h2>Contact</h2>
-<div class="card contact">
+
+<div class="contact" style="text-align:center">
+
 <a href="tel:+33769568323">📞 +33 7 69 56 83 23</a>
-<a href="mailto:saniassen@yahoo.com">✉️ saniassen@yahoo.com</a>
-<a href="CV Asen.pdf" target="_blank">📄 Télécharger mon CV</a>
-<a href="Lettre_Motivation_ASSEN.pdf" target="_blank">📄 Lettre de motivation</a>
+
+<a href="mailto:saniassen@yahoo.com">
+✉️ saniassen@yahoo.com
+</a>
+
+<a href="CV Asen.pdf">📄 Télécharger mon CV</a>
+
+<a href="Lettre_Motivation_ASSEN.pdf">
+📄 Lettre de motivation
+</a>
+
 </div>
+
 </section>
 
 </div>
 
 <footer>
-© 2026 ASSEN MAHAMA Sani | Candidature Formation NoCode
+
+<p>© 2026 ASSEN MAHAMA Sani</p>
+
 </footer>
 
 </body>
