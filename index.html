@@ -29,6 +29,7 @@ padding:20px;
 box-shadow:0 2px 10px rgba(0,0,0,0.1);
 position:sticky;
 top:0;
+z-index:100;
 }
 
 .nav-container{
@@ -121,6 +122,11 @@ gap:25px;
 width:100%;
 border-radius:10px;
 margin-bottom:10px;
+transition:0.4s;
+}
+
+.project-card img:hover{
+transform:scale(1.05);
 }
 
 /* BUTTON */
@@ -160,6 +166,19 @@ text-align:center;
 padding:20px;
 }
 
+/* SCROLL ANIMATION */
+
+.fade-in{
+opacity:0;
+transform:translateY(30px);
+transition:all 0.8s ease;
+}
+
+.fade-in.visible{
+opacity:1;
+transform:translateY(0);
+}
+
 </style>
 </head>
 
@@ -193,7 +212,7 @@ Candidat en formation NoCode et automatisation
 </p>
 
 <p style="margin-top:10px;font-size:16px;opacity:0.9;">
-En recherche d’une opportunité en alternance
+Disponible pour une alternance et motivé à développer des compétences professionnelles
 </p>
 
 <img src="photo.jpg" alt="Photo">
@@ -204,19 +223,20 @@ En recherche d’une opportunité en alternance
 
 <!-- PROFIL -->
 
-<section id="about" class="section">
+<section id="about" class="section fade-in">
 
 <h2>Profil</h2>
 
 <div class="card">
 
 Passionné par l’informatique, j’ai commencé par apprendre
-les bases du HTML et du CSS.
+les bases du développement web avec HTML et CSS.
 
-Je développe actuellement des projets avec des outils NoCode comme Framer,
-afin de créer des sites web modernes sans programmation.
+Je développe actuellement des projets avec des outils NoCode
+comme Framer afin de créer des sites web modernes sans programmation.
 
-Je suis motivé pour apprendre et créer des projets concrets.
+Motivé et sérieux, je souhaite intégrer une formation
+afin d’acquérir des compétences professionnelles et évoluer dans le domaine du digital.
 
 </div>
 
@@ -224,7 +244,7 @@ Je suis motivé pour apprendre et créer des projets concrets.
 
 <!-- SKILLS -->
 
-<section id="skills" class="section">
+<section id="skills" class="section fade-in">
 
 <h2>Compétences</h2>
 
@@ -241,7 +261,7 @@ Je suis motivé pour apprendre et créer des projets concrets.
 
 <!-- PROJECTS -->
 
-<section id="projects" class="section">
+<section id="projects" class="section fade-in">
 
 <h2>Projets NoCode</h2>
 
@@ -256,8 +276,9 @@ Je suis motivé pour apprendre et créer des projets concrets.
 <h3>Site web avec Framer</h3>
 
 <p>
-Création d’un site web sans code avec Framer.
-Projet réalisé pour comprendre le design et la structure d’un site moderne.
+Création d’un site web moderne avec Framer (NoCode).
+Ce projet m’a permis de comprendre la structure d’un site,
+le design et l’expérience utilisateur.
 </p>
 
 <a href="TON-LINK-FRAMER" target="_blank">
@@ -276,7 +297,8 @@ Voir le projet
 
 <p>
 Création d’un jeu simple avec un outil NoCode.
-Découverte de la logique de création d’une application.
+Ce projet m’a permis de comprendre la logique
+de création d’une application et l’interaction utilisateur.
 </p>
 
 <a href="TON-LINK-JEU" target="_blank">
@@ -291,7 +313,7 @@ Voir le projet
 
 <!-- CONTACT -->
 
-<section id="contact" class="section">
+<section id="contact" class="section fade-in">
 
 <h2>Contact</h2>
 
@@ -318,6 +340,23 @@ Voir le projet
 <footer>
 © 2026 ASSEN MAHAMA Sani
 </footer>
+
+<script>
+
+const elements = document.querySelectorAll(".fade-in");
+
+function showOnScroll(){
+elements.forEach(el=>{
+const position = el.getBoundingClientRect().top;
+if(position < window.innerHeight - 100){
+el.classList.add("visible");
+}
+});
+}
+
+window.addEventListener("scroll", showOnScroll);
+
+</script>
 
 </body>
 </html>
