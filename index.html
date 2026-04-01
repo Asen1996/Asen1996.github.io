@@ -18,7 +18,13 @@ font-family:'Poppins',sans-serif;
 background:#f4f6f9;
 color:#333;
 line-height:1.8;
-font-size:16px;
+}
+
+/* GLOBAL IMAGE FIX */
+img{
+max-width:100%;
+height:auto;
+display:block;
 }
 
 /* NAV */
@@ -29,7 +35,6 @@ padding:20px;
 box-shadow:0 2px 10px rgba(0,0,0,0.1);
 position:sticky;
 top:0;
-z-index:100;
 }
 
 .nav-container{
@@ -37,18 +42,12 @@ max-width:1000px;
 margin:auto;
 display:flex;
 justify-content:space-between;
-align-items:center;
 }
 
 .nav-links a{
 margin-left:20px;
 text-decoration:none;
 color:#333;
-font-weight:500;
-}
-
-.nav-links a:hover{
-color:#0077ff;
 }
 
 /* HERO */
@@ -64,7 +63,6 @@ padding:80px 20px;
 width:150px;
 border-radius:50%;
 margin-top:20px;
-box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
 /* CONTAINER */
@@ -81,36 +79,11 @@ margin-bottom:80px;
 
 h2{
 color:#0077ff;
-margin-bottom:25px;
 text-align:center;
-font-size:26px;
+margin-bottom:25px;
 }
 
-/* CARDS */
-
-.card{
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-margin-bottom:20px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 12px 25px rgba(0,0,0,0.12);
-}
-
-/* SKILLS */
-
-.skills-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:20px;
-}
-
-/* PROJECTS GRID */
+/* PROJECT GRID */
 
 .projects-grid{
 display:grid;
@@ -125,64 +98,36 @@ background:white;
 padding:20px;
 border-radius:12px;
 box-shadow:0 8px 20px rgba(0,0,0,0.08);
-transition:0.3s;
-overflow:hidden;
 }
 
-.project-card:hover{
-transform:translateY(-5px);
-box-shadow:0 15px 30px rgba(0,0,0,0.15);
-}
-
-/* PROJECT IMAGES */
+/* 🔥 IMAGE FIX HIER */
 
 .project-card img{
 width:100%;
-height:200px;
+height:180px !important;
 object-fit:cover;
 border-radius:12px;
 margin-bottom:12px;
-transition:all 0.4s ease;
-}
-
-.project-card:hover img{
-transform:scale(1.05);
-}
-
-/* TITLES */
-
-.project-card h3{
-margin-top:10px;
-font-size:20px;
-color:#222;
 }
 
 /* BUTTON */
 
 .project a{
 display:inline-block;
-margin-top:12px;
-padding:10px 18px;
+margin-top:10px;
+padding:10px 15px;
 background:#0077ff;
 color:white;
-border-radius:25px;
+border-radius:20px;
 text-decoration:none;
-font-size:14px;
-transition:0.3s;
-}
-
-.project a:hover{
-background:#005fd1;
-transform:scale(1.05);
 }
 
 /* CONTACT */
 
 .contact a{
 display:block;
-margin:8px 0;
+margin:5px 0;
 color:#0077ff;
-text-decoration:none;
 }
 
 /* FOOTER */
@@ -194,19 +139,6 @@ text-align:center;
 padding:20px;
 }
 
-/* SCROLL ANIMATION */
-
-.fade-in{
-opacity:0;
-transform:translateY(30px);
-transition:all 0.8s ease;
-}
-
-.fade-in.visible{
-opacity:1;
-transform:translateY(0);
-}
-
 </style>
 </head>
 
@@ -214,100 +146,41 @@ transform:translateY(0);
 
 <nav>
 <div class="nav-container">
-
 <h3>ASSEN MAHAMA Sani</h3>
 
 <div class="nav-links">
 <a href="#about">Profil</a>
-<a href="#skills">Compétences</a>
 <a href="#projects">Projets</a>
 <a href="#contact">Contact</a>
 </div>
-
 </div>
 </nav>
 
-<!-- HERO -->
-
 <section class="hero">
 
-<h1 style="font-size:40px;margin-bottom:10px;">
-ASSEN MAHAMA Sani
-</h1>
+<h1>ASSEN MAHAMA Sani</h1>
 
-<p style="font-size:20px;font-weight:500;">
-Candidat en formation NoCode et automatisation
-</p>
+<p>Candidat en formation NoCode et automatisation</p>
 
-<p style="margin-top:10px;font-size:16px;opacity:0.9;">
-Disponible pour une alternance et motivé à développer des compétences professionnelles
-</p>
-
-<img src="photo.jpg" alt="Photo">
+<img src="photo.jpg">
 
 </section>
 
 <div class="container">
 
-<!-- PROFIL -->
-
-<section id="about" class="section fade-in">
-
-<h2>Profil</h2>
-
-<div class="card">
-
-Passionné par l’informatique, j’ai commencé par apprendre
-les bases du développement web avec HTML et CSS.
-
-Je développe actuellement des projets avec des outils NoCode
-comme Framer afin de créer des sites web modernes sans programmation.
-
-Motivé et sérieux, je souhaite intégrer une formation
-afin d’acquérir des compétences professionnelles et évoluer dans le domaine du digital.
-
-</div>
-
-</section>
-
-<!-- SKILLS -->
-
-<section id="skills" class="section fade-in">
-
-<h2>Compétences</h2>
-
-<div class="skills-grid">
-
-<div class="card">HTML / CSS</div>
-<div class="card">NoCode (Framer)</div>
-<div class="card">Création de sites web</div>
-<div class="card">Apprentissage autonome</div>
-
-</div>
-
-</section>
-
-<!-- PROJECTS -->
-
-<section id="projects" class="section fade-in">
+<section id="projects" class="section">
 
 <h2>Projets NoCode</h2>
 
 <div class="projects-grid">
 
-<!-- FRAMER -->
+<div class="project-card">
 
-<div class="project-card project">
-
-<img src="framer.jpg" alt="Projet Framer">
+<img src="framer.jpg">
 
 <h3>Site web avec Framer</h3>
 
-<p>
-Création d’un site web moderne avec Framer (NoCode).
-Ce projet m’a permis de comprendre la structure d’un site,
-le design et l’expérience utilisateur.
-</p>
+<p>Création d’un site web moderne avec Framer.</p>
 
 <a href="TON-LINK-FRAMER" target="_blank">
 Voir le projet
@@ -315,19 +188,13 @@ Voir le projet
 
 </div>
 
-<!-- GAME -->
+<div class="project-card">
 
-<div class="project-card project">
-
-<img src="game.jpg" alt="Jeu">
+<img src="game.jpg">
 
 <h3>Jeu avec Girl Hero</h3>
 
-<p>
-Création d’un jeu simple avec un outil NoCode.
-Ce projet m’a permis de comprendre la logique
-de création d’une application et l’interaction utilisateur.
-</p>
+<p>Création d’un jeu simple avec un outil NoCode.</p>
 
 <a href="TON-LINK-JEU" target="_blank">
 Voir le projet
@@ -339,24 +206,16 @@ Voir le projet
 
 </section>
 
-<!-- CONTACT -->
-
-<section id="contact" class="section fade-in">
+<section id="contact" class="section">
 
 <h2>Contact</h2>
 
-<div class="card contact">
+<div class="contact">
 
 <a href="tel:+33769568323">📞 +33 7 69 56 83 23</a>
 
 <a href="mailto:saniassen@yahoo.com">
 ✉️ saniassen@yahoo.com
-</a>
-
-<a href="CV Asen.pdf" target="_blank">📄 Télécharger mon CV</a>
-
-<a href="Lettre_Motivation_ASSEN.pdf" target="_blank">
-📄 Lettre de motivation
 </a>
 
 </div>
@@ -368,23 +227,6 @@ Voir le projet
 <footer>
 © 2026 ASSEN MAHAMA Sani
 </footer>
-
-<script>
-
-const elements = document.querySelectorAll(".fade-in");
-
-function showOnScroll(){
-elements.forEach(el=>{
-const position = el.getBoundingClientRect().top;
-if(position < window.innerHeight - 100){
-el.classList.add("visible");
-}
-});
-}
-
-window.addEventListener("scroll", showOnScroll);
-
-</script>
 
 </body>
 </html>
