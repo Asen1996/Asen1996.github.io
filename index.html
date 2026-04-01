@@ -14,106 +14,119 @@
 /* RESET */
 *{margin:0;padding:0;box-sizing:border-box}
 
+/* SMOOTH SCROLL */
+html{
+scroll-behavior:smooth;
+}
+
 /* BODY */
 body{
 font-family:'Poppins',sans-serif;
-background:#fff;
-color:#111;
+background:#f4f6f9;
+color:#333;
 }
 
 /* HERO */
 .hero{
-height:100vh;
+min-height:100vh;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
-text-align:center;
-padding:20px;
+justify-content:center;
+padding:40px;
+background:linear-gradient(135deg,#4e73df,#6f42c1);
+color:white;
 }
 
-/* TITLES */
-.hero h1{
-font-size:60px;
-font-weight:600;
-margin-bottom:10px;
-}
-
-.hero h2{
-font-size:26px;
-font-weight:400;
-margin-bottom:20px;
+/* HERO CONTENT */
+.hero-content{
+display:flex;
+align-items:center;
+gap:50px;
+max-width:1000px;
 }
 
 /* TEXT */
-.hero p{
-max-width:600px;
-font-size:18px;
-color:#555;
+.hero-text h1{
+font-size:50px;
+}
+
+.hero-text h2{
+margin:10px 0;
+font-weight:400;
+}
+
+.hero-text p{
+margin-top:15px;
+}
+
+/* IMAGE */
+.hero img{
+width:180px;
+border-radius:50%;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
 
 /* BUTTONS */
 .buttons{
-margin-top:30px;
+margin-top:25px;
 }
 
 .buttons a{
 display:inline-block;
-margin:10px;
+margin:8px;
 padding:12px 25px;
-border:2px solid #111;
 border-radius:30px;
+background:white;
+color:#333;
 text-decoration:none;
-color:#111;
+font-weight:500;
 transition:0.3s;
 }
 
 .buttons a:hover{
-background:#111;
+background:#0077ff;
 color:white;
 }
 
 /* SECTION */
 .section{
-padding:100px 20px;
+padding:60px 20px;
 max-width:900px;
 margin:auto;
 text-align:center;
 }
 
 .section h2{
-font-size:30px;
 margin-bottom:20px;
 }
 
-/* PROJECT */
+/* PROJECTS */
 .project{
-margin-top:20px;
+margin:30px 0;
 }
 
 .project img{
 width:100%;
-max-width:500px;
-height:250px;
+max-width:400px;
+height:200px;
 object-fit:cover;
 border-radius:10px;
-margin-bottom:10px;
 }
 
 /* CONTACT */
 .contact a{
 display:block;
-margin:10px 0;
+margin:8px 0;
 color:#0077ff;
 text-decoration:none;
 }
 
 /* FOOTER */
 footer{
-text-align:center;
-padding:40px;
-background:#111;
+background:#2c3e50;
 color:white;
+text-align:center;
+padding:20px;
 }
 
 </style>
@@ -125,19 +138,29 @@ color:white;
 <!-- HERO -->
 <section class="hero">
 
+<div class="hero-content">
+
+<div class="hero-text">
+
 <h1>Salut</h1>
 
-<h2>À propos de moi</h2>
+<h2>Je suis ASSEN</h2>
 
 <p>
-Passionné par l’informatique, je développe des projets avec des outils NoCode comme Framer.
-Je suis motivé pour apprendre et évoluer dans le domaine du digital.
+Passionné par l’informatique et le NoCode,
+je crée des projets modernes et je cherche une formation.
 </p>
 
 <div class="buttons">
 <a href="#cv">CV</a>
 <a href="#projects">Projets</a>
 <a href="#contact">Contact</a>
+</div>
+
+</div>
+
+<img src="photo.jpg" alt="photo">
+
 </div>
 
 </section>
@@ -147,9 +170,9 @@ Je suis motivé pour apprendre et évoluer dans le domaine du digital.
 
 <h2>Mon CV</h2>
 
-<p>Consultez mon parcours professionnel :</p>
+<p>Découvrez mon parcours professionnel :</p>
 
-<a href="CV Asen.pdf" target="_blank" style="color:#0077ff;">
+<a href="CV Asen.pdf" target="_blank">
 📄 Télécharger mon CV
 </a>
 
@@ -168,9 +191,7 @@ Je suis motivé pour apprendre et évoluer dans le domaine du digital.
 
 <p>Création d’un site moderne sans code.</p>
 
-<a href="TON-LINK-FRAMER" target="_blank">
-Voir le projet
-</a>
+<a href="TON-LINK-FRAMER" target="_blank">Voir</a>
 
 </div>
 
@@ -182,9 +203,7 @@ Voir le projet
 
 <p>Création d’un jeu simple.</p>
 
-<a href="TON-LINK-JEU" target="_blank">
-Voir le projet
-</a>
+<a href="TON-LINK-JEU" target="_blank">Voir</a>
 
 </div>
 
