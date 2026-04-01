@@ -22,7 +22,6 @@ font-size:16px;
 }
 
 /* NAV */
-
 nav{
 background:white;
 padding:20px;
@@ -52,7 +51,6 @@ color:#0077ff;
 }
 
 /* HERO */
-
 .hero{
 background:linear-gradient(135deg,#4e73df,#6f42c1);
 color:white;
@@ -68,7 +66,6 @@ box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
 /* CONTAINER */
-
 .container{
 max-width:1000px;
 margin:auto;
@@ -86,8 +83,7 @@ text-align:center;
 font-size:26px;
 }
 
-/* CARDS */
-
+/* CARD */
 .card{
 background:white;
 padding:25px;
@@ -102,23 +98,12 @@ transform:translateY(-5px);
 box-shadow:0 12px 25px rgba(0,0,0,0.12);
 }
 
-/* SKILLS */
-
-.skills-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-gap:20px;
-}
-
-/* PROJECTS GRID */
-
+/* PROJECTS */
 .projects-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
 }
-
-/* PROJECT CARD */
 
 .project-card{
 background:white;
@@ -134,31 +119,25 @@ transform:translateY(-5px);
 box-shadow:0 15px 30px rgba(0,0,0,0.15);
 }
 
-/* PROJECT IMAGES */
-
 .project-card img{
 width:100%;
 height:200px;
 object-fit:cover;
 border-radius:12px;
 margin-bottom:12px;
-transition:all 0.4s ease;
+transition:0.4s;
 }
 
 .project-card:hover img{
 transform:scale(1.05);
 }
 
-/* TITLES */
-
 .project-card h3{
 margin-top:10px;
 font-size:20px;
-color:#222;
 }
 
 /* BUTTON */
-
 .project a{
 display:inline-block;
 margin-top:12px;
@@ -167,7 +146,6 @@ background:#0077ff;
 color:white;
 border-radius:25px;
 text-decoration:none;
-font-size:14px;
 transition:0.3s;
 }
 
@@ -177,7 +155,6 @@ transform:scale(1.05);
 }
 
 /* CONTACT */
-
 .contact a{
 display:block;
 margin:8px 0;
@@ -186,7 +163,6 @@ text-decoration:none;
 }
 
 /* FOOTER */
-
 footer{
 background:#2c3e50;
 color:white;
@@ -194,12 +170,11 @@ text-align:center;
 padding:20px;
 }
 
-/* SCROLL ANIMATION */
-
+/* ANIMATION */
 .fade-in{
 opacity:0;
 transform:translateY(30px);
-transition:all 0.8s ease;
+transition:0.8s;
 }
 
 .fade-in.visible{
@@ -212,35 +187,30 @@ transform:translateY(0);
 
 <body>
 
+<!-- NAV -->
 <nav>
 <div class="nav-container">
-
 <h3>ASSEN MAHAMA Sani</h3>
 
 <div class="nav-links">
-<a href="#about">Profil</a>
-<a href="#skills">Compétences</a>
+<a href="#about">À propos</a>
 <a href="#projects">Projets</a>
 <a href="#contact">Contact</a>
 </div>
-
 </div>
 </nav>
 
 <!-- HERO -->
-
 <section class="hero">
 
-<h1 style="font-size:40px;margin-bottom:10px;">
-ASSEN MAHAMA Sani
-</h1>
+<h1 style="font-size:40px;">ASSEN MAHAMA Sani</h1>
 
-<p style="font-size:20px;font-weight:500;">
+<p style="font-size:20px;margin-top:10px;">
 Candidat en formation NoCode et automatisation
 </p>
 
-<p style="margin-top:10px;font-size:16px;opacity:0.9;">
-Disponible pour une alternance et motivé à développer des compétences professionnelles
+<p style="margin-top:10px;">
+Disponible pour une alternance
 </p>
 
 <img src="photo.jpg" alt="Photo">
@@ -249,90 +219,51 @@ Disponible pour une alternance et motivé à développer des compétences profes
 
 <div class="container">
 
-<!-- PROFIL -->
-
+<!-- À PROPOS -->
 <section id="about" class="section fade-in">
 
-<h2>Profil</h2>
+<h2>À propos de moi</h2>
 
 <div class="card">
 
-Passionné par l’informatique, j’ai commencé par apprendre
-les bases du développement web avec HTML et CSS.
+Je m’appelle Assen Sani. Après avoir découvert les bases du développement web (HTML, CSS), 
+je m’intéresse aujourd’hui à la création de sites avec des outils NoCode comme Framer.
 
-Je développe actuellement des projets avec des outils NoCode
-comme Framer afin de créer des sites web modernes sans programmation.
+En tant que débutant motivé, je consacre mon temps libre à apprendre le design web 
+et à réaliser mes premiers projets.
 
-Motivé et sérieux, je souhaite intégrer une formation
-afin d’acquérir des compétences professionnelles et évoluer dans le domaine du digital.
-
-</div>
-
-</section>
-
-<!-- SKILLS -->
-
-<section id="skills" class="section fade-in">
-
-<h2>Compétences</h2>
-
-<div class="skills-grid">
-
-<div class="card">HTML / CSS</div>
-<div class="card">NoCode (Framer)</div>
-<div class="card">Création de sites web</div>
-<div class="card">Apprentissage autonome</div>
+Je recherche actuellement une formation afin de transformer cet intérêt 
+en compétences professionnelles solides.
 
 </div>
 
 </section>
 
 <!-- PROJECTS -->
-
 <section id="projects" class="section fade-in">
 
 <h2>Projets NoCode</h2>
 
 <div class="projects-grid">
 
-<!-- FRAMER -->
-
 <div class="project-card project">
-
-<img src="framer.jpg" alt="Projet Framer">
+<img src="framer.jpg">
 
 <h3>Site web avec Framer</h3>
 
-<p>
-Création d’un site web moderne avec Framer (NoCode).
-Ce projet m’a permis de comprendre la structure d’un site,
-le design et l’expérience utilisateur.
-</p>
+<p>Création d’un site moderne sans code.</p>
 
-<a href="TON-LINK-FRAMER" target="_blank">
-Voir le projet
-</a>
-
+<a href="TON-LINK-FRAMER" target="_blank">Voir le projet</a>
 </div>
 
-<!-- GAME -->
-
 <div class="project-card project">
+<img src="game.jpg">
 
-<img src="game.jpg" alt="Jeu">
+<h3>Jeu NoCode</h3>
 
-<h3>Jeu avec Girl Hero</h3>
+<p>Création d’un jeu simple.</p>
 
-<p>
-Création d’un jeu simple avec un outil NoCode.
-Ce projet m’a permis de comprendre la logique
-de création d’une application et l’interaction utilisateur.
-</p>
-
-<a href="TON-LINK-JEU" target="_blank">
-Voir le projet
-</a>
-
+<a href="TON-LINK-JEU" target="_blank">Voir le projet</a>
 </div>
 
 </div>
@@ -340,7 +271,6 @@ Voir le projet
 </section>
 
 <!-- CONTACT -->
-
 <section id="contact" class="section fade-in">
 
 <h2>Contact</h2>
@@ -354,10 +284,6 @@ Voir le projet
 </a>
 
 <a href="CV Asen.pdf" target="_blank">📄 Télécharger mon CV</a>
-
-<a href="Lettre_Motivation_ASSEN.pdf" target="_blank">
-📄 Lettre de motivation
-</a>
 
 </div>
 
