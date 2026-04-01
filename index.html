@@ -11,138 +11,173 @@
 
 <style>
 
-/* RESET */
 *{margin:0;padding:0;box-sizing:border-box}
 
-/* SMOOTH SCROLL */
-html{scroll-behavior:smooth}
-
-/* BODY */
 body{
 font-family:'Poppins',sans-serif;
 background:#f4f6f9;
 color:#333;
+line-height:1.8;
+font-size:16px;
 }
 
-/* NAVBAR */
+/* NAV */
+
 nav{
-position:fixed;
+background:white;
+padding:20px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+position:sticky;
 top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 40px;
-background:rgba(255,255,255,0.9);
-backdrop-filter:blur(10px);
 z-index:100;
 }
 
-nav h3{
-font-weight:600;
+.nav-container{
+max-width:1000px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-nav a{
+.nav-links a{
 margin-left:20px;
 text-decoration:none;
 color:#333;
 font-weight:500;
 }
 
-nav a:hover{
+.nav-links a:hover{
 color:#0077ff;
 }
 
 /* HERO */
+
 .hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:80px 20px 40px;
 background:linear-gradient(135deg,#4e73df,#6f42c1);
 color:white;
+text-align:center;
+padding:80px 20px;
 }
 
-/* HERO CONTENT */
-.hero-content{
-display:flex;
-align-items:center;
-gap:60px;
-max-width:1000px;
-}
-
-/* TEXT */
-.hero-text h1{
-font-size:48px;
-}
-
-.hero-text h2{
-margin:10px 0;
-font-weight:400;
-}
-
-.hero-text p{
-margin-top:15px;
-}
-
-/* IMAGE */
 .hero img{
-width:200px;
-height:200px;
-object-fit:cover;
+width:150px;
 border-radius:50%;
-box-shadow:0 10px 30px rgba(0,0,0,0.3);
+margin-top:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
-/* BUTTONS */
-.buttons{
-margin-top:25px;
+/* CONTAINER */
+
+.container{
+max-width:1000px;
+margin:auto;
+padding:60px 20px;
 }
 
-.buttons a{
-display:inline-block;
-margin:8px;
-padding:12px 25px;
-border-radius:30px;
+.section{
+margin-bottom:80px;
+}
+
+h2{
+color:#0077ff;
+margin-bottom:25px;
+text-align:center;
+font-size:26px;
+}
+
+/* CARDS */
+
+.card{
 background:white;
-color:#333;
-text-decoration:none;
-font-weight:500;
+padding:25px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+margin-bottom:20px;
 transition:0.3s;
 }
 
-.buttons a:hover{
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 12px 25px rgba(0,0,0,0.12);
+}
+
+/* SKILLS */
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:20px;
+}
+
+/* PROJECTS GRID */
+
+.projects-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+/* PROJECT CARD */
+
+.project-card{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+overflow:hidden;
+}
+
+.project-card:hover{
+transform:translateY(-5px);
+box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* PROJECT IMAGES */
+
+.project-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:12px;
+margin-bottom:12px;
+transition:all 0.4s ease;
+}
+
+.project-card:hover img{
+transform:scale(1.05);
+}
+
+/* TITLES */
+
+.project-card h3{
+margin-top:10px;
+font-size:20px;
+color:#222;
+}
+
+/* BUTTON */
+
+.project a{
+display:inline-block;
+margin-top:12px;
+padding:10px 18px;
 background:#0077ff;
 color:white;
+border-radius:25px;
+text-decoration:none;
+font-size:14px;
+transition:0.3s;
 }
 
-/* SECTION */
-.section{
-padding:70px 20px;
-max-width:900px;
-margin:auto;
-text-align:center;
-}
-
-.section h2{
-margin-bottom:20px;
-}
-
-/* PROJECT */
-.project{
-margin:30px 0;
-}
-
-.project img{
-width:100%;
-max-width:450px;
-height:220px;
-object-fit:cover;
-border-radius:10px;
+.project a:hover{
+background:#005fd1;
+transform:scale(1.05);
 }
 
 /* CONTACT */
+
 .contact a{
 display:block;
 margin:8px 0;
@@ -151,6 +186,7 @@ text-decoration:none;
 }
 
 /* FOOTER */
+
 footer{
 background:#2c3e50;
 color:white;
@@ -158,103 +194,158 @@ text-align:center;
 padding:20px;
 }
 
-</style>
+/* SCROLL ANIMATION */
 
+.fade-in{
+opacity:0;
+transform:translateY(30px);
+transition:all 0.8s ease;
+}
+
+.fade-in.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
-<h3>ASSEN</h3>
+<div class="nav-container">
 
-<div>
-<a href="#cv">CV</a>
+<h3>ASSEN MAHAMA Sani</h3>
+
+<div class="nav-links">
+<a href="#about">Profil</a>
+<a href="#skills">Compétences</a>
 <a href="#projects">Projets</a>
 <a href="#contact">Contact</a>
+</div>
+
 </div>
 </nav>
 
 <!-- HERO -->
+
 <section class="hero">
 
-<div class="hero-content">
+<h1 style="font-size:40px;margin-bottom:10px;">
+ASSEN MAHAMA Sani
+</h1>
 
-<div class="hero-text">
-
-<h1>Salut</h1>
-
-<h2>Je suis ASSEN</h2>
-
-<p>
-Passionné par l’informatique et le NoCode,
-je crée des projets modernes et je cherche une formation.
+<p style="font-size:20px;font-weight:500;">
+Candidat en formation NoCode et automatisation
 </p>
 
-<div class="buttons">
-<a href="#cv">CV</a>
-<a href="#projects">Projets</a>
-<a href="#contact">Contact</a>
-</div>
+<p style="margin-top:10px;font-size:16px;opacity:0.9;">
+Disponible pour une alternance et motivé à développer des compétences professionnelles
+</p>
 
-</div>
+<img src="photo.jpg" alt="Photo">
 
-<img src="photo.jpg" alt="photo">
+</section>
+
+<div class="container">
+
+<!-- PROFIL -->
+
+<section id="about" class="section fade-in">
+
+<h2>Profil</h2>
+
+<div class="card">
+
+Passionné par l’informatique, j’ai commencé par apprendre
+les bases du développement web avec HTML et CSS.
+
+Je développe actuellement des projets avec des outils NoCode
+comme Framer afin de créer des sites web modernes sans programmation.
+
+Motivé et sérieux, je souhaite intégrer une formation
+afin d’acquérir des compétences professionnelles et évoluer dans le domaine du digital.
 
 </div>
 
 </section>
 
-<!-- CV -->
-<section id="cv" class="section">
+<!-- SKILLS -->
 
-<h2>Mon CV</h2>
+<section id="skills" class="section fade-in">
 
-<p>Découvrez mon parcours professionnel :</p>
+<h2>Compétences</h2>
 
-<a href="CV Asen.pdf" target="_blank">
-📄 Télécharger mon CV
-</a>
+<div class="skills-grid">
+
+<div class="card">HTML / CSS</div>
+<div class="card">NoCode (Framer)</div>
+<div class="card">Création de sites web</div>
+<div class="card">Apprentissage autonome</div>
+
+</div>
 
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section">
 
-<h2>Projets</h2>
+<section id="projects" class="section fade-in">
 
-<div class="project">
+<h2>Projets NoCode</h2>
 
-<img src="framer.jpg">
+<div class="projects-grid">
 
-<h3>Site web Framer</h3>
+<!-- FRAMER -->
 
-<p>Création d’un site moderne sans code.</p>
+<div class="project-card project">
 
-<a href="TON-LINK-FRAMER" target="_blank">Voir</a>
+<img src="framer.jpg" alt="Projet Framer">
+
+<h3>Site web avec Framer</h3>
+
+<p>
+Création d’un site web moderne avec Framer (NoCode).
+Ce projet m’a permis de comprendre la structure d’un site,
+le design et l’expérience utilisateur.
+</p>
+
+<a href="TON-LINK-FRAMER" target="_blank">
+Voir le projet
+</a>
 
 </div>
 
-<div class="project">
+<!-- GAME -->
 
-<img src="game.jpg">
+<div class="project-card project">
 
-<h3>Jeu NoCode</h3>
+<img src="game.jpg" alt="Jeu">
 
-<p>Création d’un jeu simple.</p>
+<h3>Jeu avec Girl Hero</h3>
 
-<a href="TON-LINK-JEU" target="_blank">Voir</a>
+<p>
+Création d’un jeu simple avec un outil NoCode.
+Ce projet m’a permis de comprendre la logique
+de création d’une application et l’interaction utilisateur.
+</p>
+
+<a href="TON-LINK-JEU" target="_blank">
+Voir le projet
+</a>
+
+</div>
 
 </div>
 
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
+
+<section id="contact" class="section fade-in">
 
 <h2>Contact</h2>
 
-<div class="contact">
+<div class="card contact">
 
 <a href="tel:+33769568323">📞 +33 7 69 56 83 23</a>
 
@@ -262,13 +353,38 @@ je crée des projets modernes et je cherche une formation.
 ✉️ saniassen@yahoo.com
 </a>
 
+<a href="CV Asen.pdf" target="_blank">📄 Télécharger mon CV</a>
+
+<a href="Lettre_Motivation_ASSEN.pdf" target="_blank">
+📄 Lettre de motivation
+</a>
+
 </div>
 
 </section>
 
+</div>
+
 <footer>
 © 2026 ASSEN MAHAMA Sani
 </footer>
+
+<script>
+
+const elements = document.querySelectorAll(".fade-in");
+
+function showOnScroll(){
+elements.forEach(el=>{
+const position = el.getBoundingClientRect().top;
+if(position < window.innerHeight - 100){
+el.classList.add("visible");
+}
+});
+}
+
+window.addEventListener("scroll", showOnScroll);
+
+</script>
 
 </body>
 </html>
