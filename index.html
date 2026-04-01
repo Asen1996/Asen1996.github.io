@@ -15,9 +15,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 
 /* SMOOTH SCROLL */
-html{
-scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 /* BODY */
 body{
@@ -26,13 +24,42 @@ background:#f4f6f9;
 color:#333;
 }
 
+/* NAVBAR */
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:rgba(255,255,255,0.9);
+backdrop-filter:blur(10px);
+z-index:100;
+}
+
+nav h3{
+font-weight:600;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+nav a:hover{
+color:#0077ff;
+}
+
 /* HERO */
 .hero{
 min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-padding:40px;
+padding:80px 20px 40px;
 background:linear-gradient(135deg,#4e73df,#6f42c1);
 color:white;
 }
@@ -41,13 +68,13 @@ color:white;
 .hero-content{
 display:flex;
 align-items:center;
-gap:50px;
+gap:60px;
 max-width:1000px;
 }
 
 /* TEXT */
 .hero-text h1{
-font-size:50px;
+font-size:48px;
 }
 
 .hero-text h2{
@@ -61,7 +88,9 @@ margin-top:15px;
 
 /* IMAGE */
 .hero img{
-width:180px;
+width:200px;
+height:200px;
+object-fit:cover;
 border-radius:50%;
 box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
@@ -90,7 +119,7 @@ color:white;
 
 /* SECTION */
 .section{
-padding:60px 20px;
+padding:70px 20px;
 max-width:900px;
 margin:auto;
 text-align:center;
@@ -100,15 +129,15 @@ text-align:center;
 margin-bottom:20px;
 }
 
-/* PROJECTS */
+/* PROJECT */
 .project{
 margin:30px 0;
 }
 
 .project img{
 width:100%;
-max-width:400px;
-height:200px;
+max-width:450px;
+height:220px;
 object-fit:cover;
 border-radius:10px;
 }
@@ -134,6 +163,17 @@ padding:20px;
 </head>
 
 <body>
+
+<!-- NAVBAR -->
+<nav>
+<h3>ASSEN</h3>
+
+<div>
+<a href="#cv">CV</a>
+<a href="#projects">Projets</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
 <!-- HERO -->
 <section class="hero">
