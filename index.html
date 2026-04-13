@@ -11,13 +11,10 @@
 
 <style>
 
-/* RESET */
 *{margin:0;padding:0;box-sizing:border-box}
 
-/* SMOOTH SCROLL */
 html{scroll-behavior:smooth}
 
-/* BODY */
 body{
 font-family:'Poppins',sans-serif;
 background:#f4f6f9;
@@ -56,7 +53,6 @@ color:#0077ff;
 transform:translateY(-2px);
 }
 
-/* ACTIVE NAV */
 .nav-links a.active{
 color:#0077ff;
 font-weight:600;
@@ -73,7 +69,7 @@ padding:80px 20px;
 }
 
 .hero img{
-width:150px;
+width:160px;
 border-radius:50%;
 margin-top:20px;
 box-shadow:0 5px 20px rgba(0,0,0,0.2);
@@ -133,7 +129,7 @@ transform:translateY(-5px);
 
 .project-card img{
 width:100%;
-height:200px;
+height:280px; /* 🔥 größer gemacht */
 object-fit:cover;
 border-radius:12px;
 margin-bottom:12px;
@@ -141,7 +137,7 @@ transition:0.4s;
 }
 
 .project-card:hover img{
-transform:scale(1.05);
+transform:scale(1.08);
 }
 
 /* BUTTON */
@@ -192,13 +188,12 @@ transform:translateY(0);
 
 <body>
 
-<!-- NAV -->
 <nav>
 <div class="nav-container">
 <h3>ASSEN MAHAMA Sani</h3>
 
 <div class="nav-links">
-<a href="#about">À proposde moi</a>
+<a href="#about">À propos</a>
 <a href="#projects">Projets</a>
 <a href="#contact">Contact</a>
 </div>
@@ -224,7 +219,7 @@ Disponible pour une alternance
 
 <div class="container">
 
-<!-- À PROPOS de moi-->
+<!-- À PROPOS -->
 <section id="about" class="section fade-in">
 
 <h2>À propos de moi</h2>
@@ -232,13 +227,12 @@ Disponible pour une alternance
 <div class="card">
 
 Je m’appelle Assen Sani. Après avoir découvert les bases du développement web (HTML, CSS), 
-je m’intéresse aujourd’hui à la création de sites avec des outils NoCode comme Framer.
+je me suis orienté vers la création de sites modernes avec des outils NoCode comme Framer.
 
-En tant que débutant motivé, je consacre mon temps libre à apprendre le design web 
-et à réaliser mes premiers projets.
+Actuellement débutant mais très motivé, je développe mes compétences en design web 
+et je réalise des projets concrets pour progresser.
 
-Je recherche actuellement une formation afin de transformer cet intérêt 
-en compétences professionnelles solides.
+Mon objectif est d’intégrer une formation afin de devenir professionnel dans le domaine du digital.
 
 </div>
 
@@ -251,24 +245,40 @@ en compétences professionnelles solides.
 
 <div class="projects-grid">
 
+<!-- FRAMER -->
 <div class="project-card project">
+
+<a href="https://new-empathy-863879.framer.app" target="_blank">
 <img src="framer.jpg">
+</a>
 
 <h3>Site web avec Framer</h3>
 
-<p>Création d’un site moderne sans code.</p>
+<p>
+Création d’un site web moderne avec Framer (NoCode),
+incluant design responsive et structure professionnelle.
+</p>
 
-<a href="https://new-empathy-863879.framer.app" target="_blank">Voir le projet</a>
+<a href="https://new-empathy-863879.framer.app" target="_blank">
+Voir le projet
+</a>
+
 </div>
 
+<!-- GAME -->
 <div class="project-card project">
+
 <img src="game.jpg">
 
 <h3>Jeu NoCode</h3>
 
-<p>Création d'un jeu simple avec Girl Hero.</p>
+<p>
+Création d’un jeu simple avec Girl Hero,
+permettant de comprendre la logique des interactions utilisateur.
+</p>
 
 <a href="TON-LINK-Hero" target="_blank">Voir le projet</a>
+
 </div>
 
 </div>
@@ -284,7 +294,7 @@ en compétences professionnelles solides.
 
 <a href="tel:+33769568323">📞 +33 7 69 56 83 23</a>
 
-<a href="mailto:saniassen@yahoo.com">
+<a href="mailto:assenmahamasani@gmail.com">
 ✉️ assenmahamasani@gmail.com
 </a>
 
@@ -302,7 +312,6 @@ en compétences professionnelles solides.
 
 <script>
 
-/* SCROLL ANIMATION */
 const elements = document.querySelectorAll(".fade-in");
 
 function showOnScroll(){
